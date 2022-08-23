@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+      <p>
+        <label for="username">Enter a Username:</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="username"
+          name="username"
+        />
+        <!-- this name sends the data to /tacos?username=kjlkj -->
+      </p>
+      <p>
+        <label for="password">Enter a Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          name="password"
+        />
+      </p>
+      <p>
+        <label for="color">Enter a Color:</label>
+        <input id="color" type="color" name="color" />
+      </p>
+
+      <!-- Also valid but harder to style -->
+      <p>
+        <label
+          >Enter a Number:<input
+            type="number"
+            placeholder="enter a number"
+            name="num" min="1" max="1000" step="2"
+        /></label>
+      </p>
+      <button>Submit</button>
+      <!-- So does this one -->
+      <input type="submit" value="Click Me!" />
+               </form>
+          <hr>
+          <!-- Outside of a form, no default behavior -->
+          <p>
+        <button>Not Inside Form</button>
+          </p>
+    <!-- Hijacking Reddit, Google, Youtube Search -->
+          <h2>Hijacking Searches</h2>
+          <h3>Search Reddit</h3>
+      <p>
+         <form action="https://www.reddit.com/search">
+          <input type="text" name="q">
+          <button>Search Reddit</button>
+        </form>
+      </p>
+      <h3>Search Google</h3>
+      <p>
+        <form action="https://www.google.com/search">
+          <input type="text" name="q">
+          <button>Search Google</button>
+        </form>
+      </p>
+      <h3>Search Youtube</h3>
+      <p>
+        <form action="https://www.youtube.com/results">
+          <input type="text" name="search_query">
+          <button>Search Youtube</button>
+        </form>
+      </p>
+
+      <h2>More Inputs!</h2>
+      <!-- Input type CHECKBOX -->
+      <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to everything</label>
+        <p>
+          <label for="xs">XS</label>
+          <input type="radio" name="size" id="xs" value="xs">
+           <label for="s">S</label>
+          <input type="radio" name="size" id="s" value="s">
+           <label for="m">M</label>
+          <input type="radio" name="size" id="m" value="m">
+        </p>
+        <!-- Input type SELECT -->
+        <p>
+          <label for="meal">Please Select an Entree</label>
+          <select name="meal" id="meal">
+            <option value="fish">Fish</option>
+            <option value="veg" selected>Vegetarian</option>
+            <option value="steak">Steak</option>
+          </select>
+        </p>
+    <!-- Input type RANGE -->
+    <p>
+      <label for="cheese" ></label>
+      <input type="range" id="cheese" min="1" max="100" step="5" value="75" name="cheese_level">
+    </p>
+        <button>Submit</button>
+      </form>
+      <!-- TEXT AREA -->
+  <p>
+    <label for="requests">Any Special Requests?</label>
+    <br>
+    <textarea name="requests" id="requests" cols="30" rows="10" placeholder="Type something here"></textarea>
+  </p>
+  <h2>Validation Demo</h2>
+  <form action="/dummy">
+    <label for="first">Enter First Name</label>
+    <input type="text" name="first" id="first" required>
+    <p>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
+    </p>
+    <p>
+      <input type="email" required>
+      <input type="url" required>
+    </p>
+    <button>Submit</button>
+  </form>
+  </body>
+</html>

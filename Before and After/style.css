@@ -1,0 +1,33 @@
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+p::after {
+  color: magenta;
+  background-color: pink;
+  width: 100%;
+  height: 15px;
+  display: block;
+  content: "";
+}
+
+/* p::before {
+  content: open-quote;
+  position: absolute;
+  font-size: 8rem;
+  color: pink;
+  top: -2rem;
+  left: -3.5rem;
+}
+p::after {
+  content: close-quote;
+  position: absolute;
+  font-size: 8rem;
+  color: pink;
+  top: 2rem;
+  left: -3.5rem;
+} */
